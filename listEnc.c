@@ -22,7 +22,7 @@ int main(){
     {
         printf("\n");
         fflush(stdin);
-        printf("digite o nome = ");
+        printf("Digite o nome = ");
         fgets(proximo_aluno->nome,20,stdin);
         
         fflush(stdin);
@@ -39,8 +39,17 @@ int main(){
         }else{
             break; // sair do loop
         }
-
     }
-    
+    proximo_aluno->proximo = NULL;
+    printf("\n");
 
-}
+    proximo_aluno = ini_aluno;
+    printf("\n");
+
+    while (proximo_aluno != NULL)
+    {
+        printf("Nome: %sIdade: %i\n\n",proximo_aluno->nome, proximo_aluno->idade);
+        proximo_aluno= proximo_aluno->proximo; 
+    }
+    return 0;
+ }
