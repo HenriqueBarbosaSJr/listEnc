@@ -48,7 +48,7 @@ int main(){
 
     while (proximo_aluno != NULL)
     {
-        printf("Nome: %sIdade: %i\n\n",proximo_aluno->nome, proximo_aluno->idade);
+        printf("Nome: %sIdade: %i\n\n\n",proximo_aluno->nome, proximo_aluno->idade);
         proximo_aluno= proximo_aluno->proximo; 
     }
     return 0;
