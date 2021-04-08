@@ -21,17 +21,24 @@ int main(){
     while (1)
     {
         printf("\n");
-        
+        fflush(stdin);
         printf("digite o nome = ");
         fgets(proximo_aluno->nome,20,stdin);
         
+        fflush(stdin);
         printf("digite a idade = ");
         scanf("%i", &proximo_aluno->idade);
 
-        
+        fflush(stdin);
+        printf("Deseja continuar? <1> SIM <2> Nao: ");
+        scanf("%i",&resp);
 
-        //printf("%s",proximo_aluno->nome);
-
+        if ( resp == 1 ){
+            proximo_aluno->proximo = (Aluno *)malloc(sizeof(Aluno));
+            proximo_aluno = proximo_aluno->proximo;
+        }else{
+            break; // sair do loop
+        }
 
     }
     
