@@ -9,3 +9,14 @@ typedef struct aluno
        
 } Aluno;
 
+int main(){
+
+    Aluno * ini_aluno;
+    Aluno * proximo_aluno;
+    int resp;
+
+    ini_aluno = (Aluno *)malloc(sizeof(Aluno));
+    proximo_aluno = ini_aluno;
+
+    
+}
